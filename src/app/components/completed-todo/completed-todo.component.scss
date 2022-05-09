@@ -1,0 +1,65 @@
+@keyframes sposta {
+    from {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(1.5rem);
+    }
+    75% {
+        transform: translateX(-1.5rem);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes colore {
+    from {
+        background-color: grey
+    }
+    to {
+        background-color: white;
+    }
+}
+
+:disabled {
+    background-color: grey;
+    border: green solid 2px;
+}
+
+#ruota {
+    font-size: 4rem;
+    color: green;
+}
+
+#ruota p {
+    font-size: 4rem;
+    color: green;
+    animation-name: sposta;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+#Pagina {
+    animation-name: colore;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+#ruota p {
+    text-shadow: 0.2rem 0.2rem 0.2rem gold, -0.2rem -0.2rem 0.2rem gold;
+}
+
+.colore {
+    background-color: grey;
+}

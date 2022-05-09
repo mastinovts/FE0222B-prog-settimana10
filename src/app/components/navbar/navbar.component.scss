@@ -1,0 +1,32 @@
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: fuchsia;
+}
+
+a span {
+    background-color: green;
+    font-size: 1rem;
+    position: relative;
+    bottom: 1rem;
+}
+
+a:hover span {
+    color: white;
+}
+
+.active {
+    color: cyan;
+}
+
+.active span {
+    color: white;
+}

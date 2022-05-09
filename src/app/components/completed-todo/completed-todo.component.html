@@ -1,0 +1,21 @@
+<div class="container-fluid text-center" id="Pagina">
+    <div *ngIf="caricamentoPage==true">
+        <h1 class="p-auto">Caricamento Task</h1>
+        <div id="ruota">
+            <b>{{carica}}</b>
+        </div>
+    </div>
+    <div *ngIf="caricamentoPage==false">
+        <h1>Task completati</h1>
+        <h6 *ngIf="taskcompleti<0">Non hai completato task</h6>
+        <table class="container text-center border rounded-pill">
+            <tr *ngFor="let item of lista">
+                <th>
+                    <p *ngIf="item.completed==true" class="border">
+                        <i>- </i> <span class="text-success">{{item.title}}</span>
+                    </p>
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container-fluid text-center" id="Pagina">
+    <div *ngIf="caricamentoPage==true">
+        <h1>Attendi...</h1>
+        <div id="ruota">
+            <b>{{carica}}</b>
+        </div>
+    </div>
+    <div *ngIf="caricamentoPage==false" class="container-fluid mx-1">
+        <h1>ToDo</h1>
+        <input type="text" id="schermo" [(ngModel)]="this.oggetto">
+        <button class="btn-secondary mb-3" (click)="aggiungi()" [disabled]="controllo">
+      +
+    </button>
+        <h6 *ngIf="lista.length===0">Non ci sono task</h6>
+        <table class="container-fluid text-center">
+            <tr *ngFor="let item of lista" class="border rounded-pill">
+                <th *ngIf="item.completed==false" class="p-1">
+                    <i>- </i> <span class="text-danger">{{item.title}}</span>
+                    <button class="btn btn-success" id='{{item.id}}' (click)="completaTask(item.id)">&#10003;</button>
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
